@@ -23,7 +23,7 @@ nav p {
 header{
     margin-left: 2.6rem;
     margin-right: 2.6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 header div{
    
@@ -36,15 +36,15 @@ div img{
     height: 2.5rem;
 }
 .transinfo{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin-top: 1rem;
 }
 .transvalue{
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: bold;
     font-family: "Heiti SC";
     margin-top: 0rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 .samarycol1{
     font-size: 0.8rem;
