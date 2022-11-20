@@ -198,13 +198,13 @@
       "mscorlib.dll": "sha256-pO\/W4w\/X+UjVMUMaxE5tYTQ0tILP+hmMu0zi0MSVBLc=",
       "netstandard.dll": "sha256-kj5cBXzwPYC+HD+P8+6VybY34JtEzjXjMIHXEI3hIiM=",
       "System.Private.CoreLib.dll": "sha256-Awk1lCiFfH7r9AAZfBtGqS8rhv6UJ5lUu3yF6HDH3tQ=",
-      "BlazorApp1.dll": "sha256-auFMztowpc9910e1oDAJP4nBbx6M2sXFGyK+Sf5o\/fA="
+      "BlazorApp1.dll": "sha256-scitaVFlFAy4HqT+YhmdXYZ5hwOg5MLJK1Qtm1mIcT0="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "BlazorApp1.pdb": "sha256-jGI5YgA+uylbhrlVcAEkbmE8ZZDzVzi8YFNklDpZBSU="
+      "BlazorApp1.pdb": "sha256-eI4aQ87uNQBVRMPhDp0\/9\/VqXet0LnaWhBKyQuz3Acw="
     },
     "runtime": {
       "dotnet.7.0.0.358af6qddw.js": "sha256-2jNLve8W0sST0LAebgAc1IwSnGhkbjOKO8QPWWiJssI=",

@@ -5,85 +5,87 @@ html, body {
     background-color: #efefef;
 }
 nav {
-
-    font-size: 3.5rem;
-    height: 230px;
+    font-size: 0.8rem;
+    height: 110px;
 }
 
 nav p {
-    font-size: 2rem;
+    font-size: 0.8rem;
     color: #a6a6a6;
-}
-div img{
-    width: 6rem;
-    height: 6rem;
 }
 
 .close {
-    font-size: 3rem;
-    padding-left: 3rem;
-    padding-top: 3rem;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
     border-bottom: #777777;
 }
-
+header{
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
+    padding-bottom: 2rem;
+}
+header div{
+   
+}
 .avatar {
-    height: 7rem;
-    width: 7rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
+}
+div img{
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .transinfo{
-    font-size: 2.8rem;
-    margin-top: 3.3rem;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 .transvalue{
-    font-size: 4.8rem;
-    margin-top: 2rem;
-    margin-bottom: 10rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: "Heiti SC";
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+}
+.samarycol1{
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    color: #777777;
+    padding: 0px;
+}
+.samarycol2{
+    font-size: 0.8rem;
+    padding-left: 0rem;
 }
 .blank {
-    height: 2rem;
+    height: 0.5rem;
     background-color: #efefef;
 }
 
 .nag {
     background-color: #f7f7f7;
-    font-size: 3.5rem;
-    height: 230px;
-}
-header{
-    margin-left: 8rem;
-    margin-right: 8rem;
-    padding-bottom: 10rem;
+    font-size: 1.5rem;
+    height: 110px;
 }
 header div hr{
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 footer{
-    margin-top: 2rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-top: 1rem;
+    margin-left: 2.6rem;
+    margin-right: 2.6rem;
     font-size: 2.2rem;
-    padding-bottom: 2rem
+    padding-bottom: 1.3rem
 }
 footer div i{
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
 }
 footer div hr{
 }
-.samarycol1{
-    font-size: 2.5rem;
-    margin-bottom: 0.3rem;
-    color: #777777;
-}
-.samarycol2{
-    font-size: 2.5rem;
-    padding-left: 4rem;
-}
 .billservice{
     color: #556592;
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0rem;
 }
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
