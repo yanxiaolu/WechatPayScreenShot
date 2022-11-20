@@ -23,7 +23,7 @@ nav p {
 header{
     margin-left: 2.6rem;
     margin-right: 2.6rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 header div{
    
@@ -47,13 +47,13 @@ div img{
     margin-bottom: 1.5rem;
 }
 .samarycol1{
-    font-size: 0.8rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
     color: #777777;
     padding: 0px;
 }
 .samarycol2{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding-left: 0rem;
 }
 .blank {
