@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{9DAD90E4-C318-4858-9BA1-0AA61194AC7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DAD90E4-C318-4858-9BA1-0AA61194AC7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DAD90E4-C318-4858-9BA1-0AA61194AC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DAD90E4-C318-4858-9BA1-0AA61194AC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DAD90E4-C318-4858-9BA1-0AA61194AC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
