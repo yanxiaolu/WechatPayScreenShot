@@ -96,7 +96,6 @@ footer div hr{
 .invalid {
     outline: 1px solid red;
 }
-
 .validation-message {
     color: red;
 }
