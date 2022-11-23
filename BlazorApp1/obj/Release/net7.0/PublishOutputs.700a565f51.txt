@@ -1,1 +1,0 @@
-/Users/yanxl/Code/WechatPay/BlazorApp1/bin/Release/net7.0/publish/web.config
