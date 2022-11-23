@@ -5,53 +5,94 @@
 <header class="">
     <div class="row text-break">
         <div class="col-12 avatar text-center">
-            <img class="rounded-circle" src="@payment.AvatarPath" alt="" @onclick="() => OnShowingPopup()"/>
+            <img class="rounded-circle" src="@_payment.AvatarPath" alt="" @onclick="() => OnShowingPopup()"/>
         </div>
         <div class="col-12 transinfo text-center">
-            <p>@payment.TransferTo</p>
+            <p>@_payment.TransferTo</p>
         </div>
         <div class="col-12 transvalue text-center">
-            <p>@payment.TransferAmount</p>
+            <p>@_payment.TransferAmount</p>
         </div>
         <hr>
         <div class="col-3 samarycol1">当前状态</div>
-        <div class="col-9 samarycol2">@payment.CurrentStat</div>
+        <div class="col-9 samarycol2">@_payment.CurrentStat</div>
         <div class="col-3 samarycol1">转账说明</div>
-        <div class="col-9 samarycol2">@payment.TransferNote</div>
+        <div class="col-9 samarycol2">@_payment.TransferNote</div>
         <div class="col-3 samarycol1">转账时间</div>
-        <div class="col-9 samarycol2">@payment.TransferDate</div>
+        <div class="col-9 samarycol2">@_payment.TransferDate.ToString("yyyy-M-d HH:mm:ss")</div>
         <div class="col-3 samarycol1">收款时间</div>
-        <div class="col-9 samarycol2">@payment.CollectionTime</div>
+        <div class="col-9 samarycol2">@_payment.CollectionTime.ToString("yyyy-M-d HH:mm:ss")</div>
         <div class="col-3 samarycol1">支付方式</div>
-        <div class="col-9 samarycol2">@payment.PaymentMethod</div>
+        <div class="col-9 samarycol2">@_payment.PaymentMethod</div>
         <div class="col-3 samarycol1">转账单号</div>
-        <div class="col-9 samarycol2">@payment.TransferOrderId</div>
+        <div class="col-9 samarycol2">@_payment.TransferOrderId</div>
     </div>
 </header>
-
+<div class="blank vw-100"></div>
+@if (_payment.TransferNote == NoteType.微信转账)
+{
+    <footer class="">
+        <div class="row">
+            <div class="col-12 p-0" style="font-size: 0.8rem">
+                <p>账单服务</p>
+            </div>
+            <hr >
+            <div class="col-6 p-0 billservice"><i class="bi bi-question-circle"></i>对订单有疑惑</div>
+            <div class="col-6 p-0 billservice"><i class="bi bi-chat"></i>定位到聊天位置</div>
+            <div class="col-6 p-0 billservice"><i class="bi bi-star"></i>申请转账电子凭证</div>
+            <div class="col-6 p-0 billservice"> <i class="bi bi-arrow-left-right"></i>查看来往转账</div>
+        </div>
+    </footer>
+}
+else
+{
+    <footer class="">
+        <div class="row">
+            <div class="col-12 p-0" style="font-size: 0.8rem">
+                <p>账单服务</p>
+            </div>
+            <hr >
+            <div class="col-6 p-0 billservice"><i class="bi bi-question-circle"></i>对订单有疑惑</div>
+            <div class="col-6 p-0 billservice"><i class="bi bi-file-check"></i>发起群收款</div>
+        </div>
+    </footer>
+    <div class="blank"></div>
+    <div class="footer">
+        <div class="row">
+            <div class="col-12 p-0" style="font-size: 0.8rem">
+                <p>账单服务</p>
+            </div>
+            <hr >
+            <div class="col-6 p-0 billservice"><i class="bi bi-person-vcard"></i>收款方名片</div>
+        </div>
+    </div>
+}
 @if (_showPopup)
 {
     <div class="container position-absolute top-50 start-50 translate-middle bg-light"
          style="z-index: 2000">
-        <EditForm Model="@payment">
+        <EditForm Model="@_payment">
             <label class="form-label">头像地址</label>
-            <InputText class="form-control" @bind-Value="payment.AvatarPath"/>
+            <InputText class="form-control" @bind-Value="_payment.AvatarPath"/>
             <label class="form-label">收款人</label>
-            <InputText class="form-control" @bind-Value="payment.TransferTo"/>
+            <InputText class="form-control" @bind-Value="_payment.TransferTo"/>
             <label class="form-label">转账金额</label>
-            <InputText class="form-control" @bind-Value="payment.TransferAmount"/>
+            <InputText class="form-control" @bind-Value="_payment.TransferAmount"/>
             <label class="form-label">当前状态</label>
-            <InputText class="form-control" @bind-Value="payment.CurrentStat"/>
-            <label class="form-label">转账说明</label>
-            <InputText class="form-control" @bind-Value="payment.TransferNote"/>
+            <InputText class="form-control" @bind-Value="_payment.CurrentStat"/>
+            <label class="form-form-label">转账说明</label>
+            <InputRadioGroup @bind-Value="_payment.TransferNote">
+                <InputRadio Value="@NoteType.二维码收款"/>
+                <label class="form-check-label">二维码收款</label>
+                <InputRadio Value="@NoteType.微信转账"/>
+                <label class="form-check-label">微信转账</label>
+            </InputRadioGroup><br>
             <label class="form-label">转账时间</label>
-            <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="payment.TransferDate"/>
+            <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="_payment.TransferDate"/>
             <label class="form-label">收款时间</label>
-            <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="payment.CollectionTime"/>
+            <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="_payment.CollectionTime"/>
             <label class="form-label">支付方式</label>
-            <InputText class="form-control" @bind-Value="payment.PaymentMethod"/>
-            <label class="form-label">转账单号</label>
-            <InputText class="form-control" @bind-Value="payment.TransferOrderId"/>
+            <InputText class="form-control" @bind-Value="_payment.PaymentMethod"/>
             <button type="submit" class="btn btn-outline-primary" @onclick="OnClosePopup">更改</button>
         </EditForm>
     </div>
@@ -59,8 +100,20 @@
 
 @code
 {
-    private Payment payment = new();
+    private Payment _payment = new();
     bool _showPopup;
+
+    protected override void OnInitialized()
+    {
+        _payment.AvatarPath = "images/tx.jpg";
+        _payment.TransferTo = "转账-转账给华达";
+        _payment.TransferAmount = "-100.00";
+        _payment.TransferNote = NoteType.二维码收款;
+        _payment.TransferDate = DateTime.Now;
+        _payment.CollectionTime = DateTime.Now;
+        _payment.PaymentMethod = "中国银行储蓄卡(0155)";
+        GenerateOrderId();
+    }
 
     void OnShowingPopup()
     {
@@ -70,7 +123,28 @@
 
     void OnClosePopup()
     {
+        GenerateOrderId();
         _showPopup = false;
         Console.WriteLine("_showPopup = false;");
+    }
+
+    void GenerateOrderId()
+    {
+        Random rd = new();
+        DateTime dt = DateTime.Now;
+        var rand1 = rd.Next(99999);
+        var rand2 = rd.Next(99999999);
+
+        if (_payment.TransferNote == NoteType.微信转账)
+        {
+            _payment.CurrentStat = "对方已收钱";
+            _payment.TransferOrderId = "1000050001" + dt.ToString("yyyyMMdd") + rand1 + rand2;
+        }
+        else
+        {
+            _payment.AvatarPath = "images/qrpay.png";
+            _payment.CurrentStat = "支付成功";
+            _payment.TransferOrderId = "1000049901" + dt.ToString("yyyyMMdd") + rand1 + rand2;
+        }
     }
 }

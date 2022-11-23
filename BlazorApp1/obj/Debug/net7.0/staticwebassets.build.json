@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MF9lE+E+nVmc90MMTmPqHdKDIqObyE2YxzsOIOzTRkI=",
+  "Hash": "BJOpWUjXhoLuftNi83UEHX1Ka2Zle4ZRpX+Qr49LsPI=",
   "Source": "BlazorApp1",
   "BasePath": "/",
   "Mode": "Root",
@@ -7155,6 +7155,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/icon-192.png"
+    },
+    {
+      "Identity": "/Users/yanxl/Code/WechatPay/BlazorApp1/wwwroot/images/qrpay.png",
+      "SourceId": "BlazorApp1",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/yanxl/Code/WechatPay/BlazorApp1/wwwroot/",
+      "BasePath": "/",
+      "RelativePath": "images/qrpay.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/qrpay.png"
     },
     {
       "Identity": "/Users/yanxl/Code/WechatPay/BlazorApp1/wwwroot/images/tx.jpg",

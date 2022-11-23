@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets/icon-192.png"
     },
     {
+      "Id": "/Users/yanxl/Code/WechatPay/BlazorApp1/wwwroot/images/qrpay.png",
+      "PackagePath": "staticwebassets/images/qrpay.png"
+    },
+    {
       "Id": "/Users/yanxl/Code/WechatPay/BlazorApp1/wwwroot/images/tx.jpg",
       "PackagePath": "staticwebassets/images/tx.jpg"
     },
