@@ -46,6 +46,8 @@
             <div class="col-9 samarycol2">@_payment.TransferNote</div>
             <div class="col-3 samarycol1">支付方式</div>
             <div class="col-9 samarycol2">@_payment.PaymentMethod</div>
+            <div class="col-3 samarycol1">转账时间</div>
+            <div class="col-9 samarycol2">@_payment.TransferDate.ToString("yyyy-M-d HH:mm:ss")</div>
             <div class="col-3 samarycol1">转账单号</div>
             <div class="col-9 samarycol2">@_payment.TransferOrderId</div>
         }
