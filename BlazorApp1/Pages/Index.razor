@@ -8,24 +8,47 @@
             <img class="rounded-circle" src="@_payment.AvatarPath" alt="" @onclick="() => OnShowingPopup()"/>
         </div>
         <div class="col-12 transinfo text-center">
-            <p>@_payment.TransferTo</p>
+            @if (_payment.TransferNote == NoteType.微信转账)
+            {
+                
+            <p>转账-转给@_payment.TransferTo</p>
+            }
+            else
+            {
+                <p>扫二维码付款-给@_payment.TransferTo</p>
+            }
         </div>
         <div class="col-12 transvalue text-center">
             <p>@_payment.TransferAmount</p>
         </div>
         <hr>
-        <div class="col-3 samarycol1">当前状态</div>
-        <div class="col-9 samarycol2">@_payment.CurrentStat</div>
-        <div class="col-3 samarycol1">转账说明</div>
-        <div class="col-9 samarycol2">@_payment.TransferNote</div>
-        <div class="col-3 samarycol1">转账时间</div>
-        <div class="col-9 samarycol2">@_payment.TransferDate.ToString("yyyy-M-d HH:mm:ss")</div>
-        <div class="col-3 samarycol1">收款时间</div>
-        <div class="col-9 samarycol2">@_payment.CollectionTime.ToString("yyyy-M-d HH:mm:ss")</div>
-        <div class="col-3 samarycol1">支付方式</div>
-        <div class="col-9 samarycol2">@_payment.PaymentMethod</div>
-        <div class="col-3 samarycol1">转账单号</div>
-        <div class="col-9 samarycol2">@_payment.TransferOrderId</div>
+
+        @if (_payment.TransferNote == NoteType.微信转账)
+        {
+            <div class="col-3 samarycol1">当前状态</div>
+            <div class="col-9 samarycol2">@_payment.CurrentStat</div>
+            <div class="col-3 samarycol1">转账说明</div>
+            <div class="col-9 samarycol2">@_payment.TransferNote</div>
+            <div class="col-3 samarycol1">转账时间</div>
+            <div class="col-9 samarycol2">@_payment.TransferDate.ToString("yyyy-M-d HH:mm:ss")</div>
+            <div class="col-3 samarycol1">收款时间</div>
+            <div class="col-9 samarycol2">@_payment.CollectionTime.ToString("yyyy-M-d HH:mm:ss")</div>
+            <div class="col-3 samarycol1">支付方式</div>
+            <div class="col-9 samarycol2">@_payment.PaymentMethod</div>
+            <div class="col-3 samarycol1">转账单号</div>
+            <div class="col-9 samarycol2">@_payment.TransferOrderId</div>
+        }
+        else
+        {
+            <div class="col-3 samarycol1">当前状态</div>
+            <div class="col-9 samarycol2">@_payment.CurrentStat</div>
+            <div class="col-3 samarycol1">收款方备注</div>
+            <div class="col-9 samarycol2">@_payment.TransferNote</div>
+            <div class="col-3 samarycol1">支付方式</div>
+            <div class="col-9 samarycol2">@_payment.PaymentMethod</div>
+            <div class="col-3 samarycol1">转账单号</div>
+            <div class="col-9 samarycol2">@_payment.TransferOrderId</div>
+        }
     </div>
 </header>
 <div class="blank vw-100"></div>
@@ -106,9 +129,9 @@ else
     protected override void OnInitialized()
     {
         _payment.AvatarPath = "images/tx.jpg";
-        _payment.TransferTo = "转账-转账给华达";
+        _payment.TransferTo = "华达";
         _payment.TransferAmount = "-100.00";
-        _payment.TransferNote = NoteType.二维码收款;
+        _payment.TransferNote = NoteType.微信转账;
         _payment.TransferDate = DateTime.Now;
         _payment.CollectionTime = DateTime.Now;
         _payment.PaymentMethod = "中国银行储蓄卡(0155)";
