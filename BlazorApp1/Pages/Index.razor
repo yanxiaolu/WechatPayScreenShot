@@ -95,26 +95,24 @@ else
     <div class="container position-absolute top-50 start-50 translate-middle bg-light"
          style="z-index: 2000">
         <EditForm Model="@_payment">
-            <label class="form-label">头像地址</label>
+            <label class="form-label mt-3">头像地址</label>
             <InputText class="form-control" @bind-Value="_payment.AvatarPath"/>
-            <label class="form-label">收款人</label>
+            <label class="form-label mt-3">收款人</label>
             <InputText class="form-control" @bind-Value="_payment.TransferTo"/>
-            <label class="form-label">转账金额</label>
+            <label class="form-label mt-3">转账金额</label>
             <InputText class="form-control" @bind-Value="_payment.TransferAmount"/>
-            <label class="form-label">当前状态</label>
-            <InputText class="form-control" @bind-Value="_payment.CurrentStat"/>
-            <label class="form-form-label">转账说明</label>
-            <InputRadioGroup @bind-Value="_payment.TransferNote">
+            <label class="form-form-label vw-100 mt-3">转账说明</label>
+            <InputRadioGroup  @bind-Value="_payment.TransferNote">
                 <InputRadio Value="@NoteType.二维码收款"/>
                 <label class="form-check-label">二维码收款</label>
                 <InputRadio Value="@NoteType.微信转账"/>
                 <label class="form-check-label">微信转账</label>
             </InputRadioGroup><br>
-            <label class="form-label">转账时间</label>
+            <label class="form-label mt-3">转账时间</label>
             <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="_payment.TransferDate"/>
-            <label class="form-label">收款时间</label>
+            <label class="form-label mt-3">收款时间</label>
             <InputDate Type="InputDateType.DateTimeLocal" class="form-control" @bind-Value="_payment.CollectionTime"/>
-            <label class="form-label">支付方式</label>
+            <label class="form-label mt-3">支付方式</label>
             <InputText class="form-control" @bind-Value="_payment.PaymentMethod"/>
             <button type="submit" class="btn btn-outline-primary" @onclick="OnClosePopup">更改</button>
         </EditForm>
