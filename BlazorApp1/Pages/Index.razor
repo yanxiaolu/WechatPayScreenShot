@@ -10,8 +10,8 @@
         <div class="col-12 transinfo text-center">
             @if (_payment.TransferNote == NoteType.微信转账)
             {
-                
-            <p>转账-转给@_payment.TransferTo</p>
+
+                <p>转账-转给@_payment.TransferTo</p>
             }
             else
             {
@@ -104,7 +104,7 @@ else
             <label class="form-label mt-3">转账金额</label>
             <InputText class="form-control" @bind-Value="_payment.TransferAmount"/>
             <label class="form-form-label vw-100 mt-3">转账说明</label>
-            <InputRadioGroup  @bind-Value="_payment.TransferNote">
+            <InputRadioGroup @bind-Value="_payment.TransferNote">
                 <InputRadio Value="@NoteType.二维码收款"/>
                 <label class="form-check-label">二维码收款</label>
                 <InputRadio Value="@NoteType.微信转账"/>
@@ -120,6 +120,23 @@ else
         </EditForm>
     </div>
 }
+
+<nav class="fixed-bottom">
+    @if (_payment.TransferNote == NoteType.微信转账)
+    {
+        <div class="text-center" style="color: #a6a6a6;z-index: -1">
+            本服务由财付通提供
+        </div>
+    }
+    <div class="row justify-content-center text-center nag">
+        <div class="col-3">
+            <i class="bi bi-chevron-left"></i>
+        </div>
+        <div class="col-3">
+            <i class="bi bi-chevron-right" style="color: #a8a8a8"></i>
+        </div>
+    </div>
+</nav>
 
 @code
 {
