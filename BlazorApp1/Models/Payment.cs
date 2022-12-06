@@ -1,5 +1,5 @@
-namespace BlazorApp1.Pages.Models;
-using BlazorApp1.Pages.Models;
+namespace BlazorApp1.Models;
+using BlazorApp1.Models;
 
 public class Payment
 {

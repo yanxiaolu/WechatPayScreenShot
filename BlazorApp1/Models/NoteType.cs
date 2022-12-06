@@ -1,4 +1,4 @@
-namespace BlazorApp1.Pages.Models;
+namespace BlazorApp1.Models;
 
 public enum NoteType
 {
