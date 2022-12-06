@@ -146,8 +146,13 @@ else
 
     void OnClosePopup()
     {
+        Random rd = new();
         GenerateOrderId();
         _showPopup = false;
+        int second = rd.Next(0, 59);
+        int second2 = rd.Next(0, 59);
+        _payment.TransferDate = _payment.TransferDate.AddSeconds(second);
+        _payment.CollectionTime = _payment.CollectionTime.AddSeconds(second2);
         Console.WriteLine("_showPopup = false;");
     }
 
