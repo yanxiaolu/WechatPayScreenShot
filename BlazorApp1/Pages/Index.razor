@@ -176,7 +176,7 @@ else
     void GenerateOrderId()
     {
         Random rd = new();
-        DateTime dt = DateTime.Now;
+        DateTime dt = _payment.TransferDate;
         var rand1 = rd.Next(99999);
         var rand2 = rd.Next(99999999);
 
