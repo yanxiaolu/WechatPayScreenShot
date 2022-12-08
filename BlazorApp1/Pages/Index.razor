@@ -175,10 +175,10 @@ else
 
     void GenerateOrderId()
     {
-        Random rd = new();
+        Random rd = new Random();
         DateTime dt = _payment.TransferDate;
-        var rand1 = rd.Next(99999);
-        var rand2 = rd.Next(99999999);
+        var rand1 = rd.Next(9999999);
+        var rand2 = rd.Next(9999999);
 
         if (_payment.TransferNote == NoteType.微信转账)
         {
